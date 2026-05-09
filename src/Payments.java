@@ -19,4 +19,7 @@ public class Payments {
         return amount;
     }
 
+    public void showPayment() {
+        System.out.println("Payment is paid successfully! " + amount + "$ - " + method + " - " + paymentDate);
+    }
 }

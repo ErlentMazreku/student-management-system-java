@@ -1,4 +1,6 @@
 
+import com.sun.jdi.OpaqueFrameException;
+
 import java.time.LocalDate;
 
 public class SQLDemo {
@@ -209,16 +211,79 @@ public class SQLDemo {
                 course5,
                 LocalDate.now());
 
+        Payments payment1 = new Payments(
+                1,
+                100.0,
+                LocalDate.now(),
+                "Credit Card");
+
+        Payments payment2 = new Payments(
+                2,
+                200.0,
+                LocalDate.now(),
+                "PayPal");
+
+        Payments payment3 = new Payments(
+                3,
+                300.0,
+                LocalDate.now(),
+                "Cash");
+
+        Payments payment4 = new Payments(
+                4,
+                400.0,
+                LocalDate.now(),
+                "PayPal");
+
+        Payments payment5 = new Payments(
+                5,
+                500.0,
+                LocalDate.now(),
+                "Credit Card");
+
+        Payments payment6 = new Payments(
+                6,
+                600.0,
+                LocalDate.now(),
+                "PayPal");
+
+        Payments payment7 = new Payments(
+                7,
+                700.0,
+                LocalDate.now(),
+                "Credit Card");
+
+        Payments payment8 = new Payments(
+                8,
+                800.0,
+                LocalDate.now(),
+                "Cash");
+
+        Payments payment9 = new Payments(
+                9,
+                900.0,
+                LocalDate.now(),
+                "PayPal");
+
+        Payments payment10 = new Payments(
+                10,
+                1000.0,
+                LocalDate.now(),
+                "Credit Card");
+
 
         // Display each student followed by their enrollment
         Student[] students = {student1, student2, student3, student4, student5, 
                              student6, student7, student8, student9, student10};
         Enrollment[] enrollments = {enrollment1, enrollment2, enrollment3, enrollment4, enrollment5,
                                    enrollment6, enrollment7, enrollment8, enrollment9, enrollment10};
+        Payments[] payments = {payment1, payment2, payment3, payment4, payment5,
+                              payment6, payment7, payment8, payment9, payment10};
         
         for (int i = 0; i < students.length; i++) {
             students[i].showStudent();
             enrollments[i].showEnrollment();
+            payments[i].showPayment();
         }
 
     }
